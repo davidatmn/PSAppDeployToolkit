@@ -50,6 +50,8 @@ Param (
     [ValidateSet('Interactive','Silent','NonInteractive')]
     [string]$DeployMode = 'Silent',
     [Parameter(Mandatory=$false)]
+    [string]$RootDirectory = 'D:\PSAppDeployToolkit\Applications\AdobeReaderDC',
+    [Parameter(Mandatory=$false)]
     [switch]$AllowRebootPassThru = $false,
     [Parameter(Mandatory=$false)]
     [switch]$TerminalServerMode = $false,
