@@ -50,7 +50,7 @@ Param (
     [ValidateSet('Interactive','Silent','NonInteractive')]
     [string]$DeployMode = 'Silent',
     [Parameter(Mandatory=$false)]
-    [string]$RootDirectory = 'D:\PSAppDeployToolkit\Applications\AdobeReaderDC',
+    [string]$AdobeDirectory = 'D:\PSAppDeployToolkit\Applications\AdobeReaderDC',
     [Parameter(Mandatory=$false)]
     [switch]$AllowRebootPassThru = $false,
     [Parameter(Mandatory=$false)]
@@ -134,7 +134,7 @@ Try {
         ##*===============================================
         [string]$installPhase = 'Installation'
 
-        $ExePath = Get-ChildItem -Path "$dirFiles" -Include AcroRdrDC*.exe -File -Recurse -ErrorAction SilentlyContinue
+        $ExePath = Get-ChildItem -Path "$AdobeDirectory" -Include AcroRdrDC*.exe -File -Recurse -ErrorAction SilentlyContinue
 
         If($ExePath.Exists)
         {
