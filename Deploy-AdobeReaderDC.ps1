@@ -94,7 +94,7 @@ Try {
     [hashtable]$deployAppScriptParameters = $psBoundParameters
 
     ## Variables: Environment
-    [string]$scriptDirectory = "${DOWNLOADROOT}\PSAppDeployToolkit"
+    [string]$scriptDirectory = "${env:DEPLOYDIR}\PSAppDeployToolkit"
 
     ## Dot source the required App Deploy Toolkit Functions
     Try {
