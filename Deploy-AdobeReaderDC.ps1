@@ -74,8 +74,7 @@ Try {
     [string]$appScriptVersion = '1.0.0'
     [string]$appScriptDate = '09/16/2022'
     [string]$appScriptAuthor = 'David Thao'
-    [string]$appScriptCompany = 'Minnesota IT Services'
-    [string]$DOWNLOADROOT = 'D:\downloads'
+    [string]$DEPLOYDIR = 'D:\PSAppDeployToolkit'
     ##*===============================================
     ## Variables: Install Titles (Only set here to override defaults set by the toolkit)
     [string]$installName = ''
