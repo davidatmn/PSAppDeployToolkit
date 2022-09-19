@@ -92,12 +92,9 @@ Try {
     [string]$deployAppScriptDate = '22/09/2022'
     [hashtable]$deployAppScriptParameters = $psBoundParameters
 
-    ## Variables: Environment
-    [string]$scriptDirectory = "${DEPLOYDIR}\PSAppDeployToolkit"
-
     ## Dot source the required App Deploy Toolkit Functions
     Try {
-        [string]$moduleAppDeployToolkitMain = "$scriptDirectory\AppDeployToolkit\AppDeployToolkitMain.ps1"
+        [string]$moduleAppDeployToolkitMain = "${DEPLOYDIR}\AppDeployToolkit\AppDeployToolkitMain.ps1"
         If (-not (Test-Path -LiteralPath $moduleAppDeployToolkitMain -PathType 'Leaf')) { Throw "Module does not exist at the specified location [$moduleAppDeployToolkitMain]." }
         If ($DisableLogging) { . $moduleAppDeployToolkitMain -DisableLogging } Else { . $moduleAppDeployToolkitMain }
     }
